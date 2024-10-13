@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Track Request Status</title>
+</head>
+<body>
+    <h2>Track Your Requests</h2>
+    <ul>
+        {% for req in requests %}
+            <li>{{ req.customer_name }} - {{ req.request_type }} - {{ req.status }}</li>
+        {% empty %}
+            <li>No requests found</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
